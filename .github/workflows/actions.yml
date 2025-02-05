@@ -7,7 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List files
-        run:
+        run: |
+          pwd
+          ls -a
+      - name: checkout
+        uses: actions/checkout@v1
+      - name: Check files after checkout
+        run: |
           pwd
           ls -a
       - name: Simple JS Action
